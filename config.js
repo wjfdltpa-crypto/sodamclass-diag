@@ -13,7 +13,7 @@ window.APP_CONFIG = {
   // 결과 페이지가 배포된 기본 주소 (끝에 / 없이).
   // 예: GitHub Pages → https://wjfdltpa-crypto.github.io/sodam-diag
   // 비워두면 현재 페이지 주소를 자동으로 사용합니다.
-  SITE_BASE_URL: "",
+  SITE_BASE_URL: "https://wjfdltpa-crypto.github.io/sodamclass-diag",
 
   // Storage 버킷 이름 (가이드에서 만든 이름과 동일하게)
   PDF_BUCKET: "reports"
