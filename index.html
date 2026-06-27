@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>소담클래스 브랜드 자가진단</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ===== 설문 모드 UI (결과 모드에서는 숨김) ===== -->
+  <div id="chrome">
+    <div class="survey-wrap">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brandrow">
+            <div class="logo"><span class="dot"></span>소담클래스 브랜드 자가진단</div>
+            <div class="stepcount" id="stepcount"></div>
+          </div>
+          <div class="progress"><div class="bar" id="bar"></div></div>
+          <div class="steps" id="pips"></div>
+        </div>
+      </header>
+      <main id="main"></main>
+      <div class="footer">
+        <div class="footer-inner">
+          <div style="flex:1">
+            <div class="miniprog" id="miniprog"></div>
+            <div style="display:flex; gap:10px">
+              <button class="btn btn-ghost" id="prevBtn" style="display:none">이전</button>
+              <button class="btn btn-primary" id="nextBtn">시작하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 결과 모드 UI ===== -->
+  <div class="result-wrap"><div id="report"></div></div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- 외부 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- 앱 -->
+  <script src="./config.js"></script>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
