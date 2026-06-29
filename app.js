@@ -353,6 +353,7 @@ function renderReport(rec){
     <div class="result-actions" id="resultActions">
       <button class="btn btn-primary" id="pdfBtn">PDF로 저장</button>
       ${rec.id?`<button class="btn btn-ghost" id="copyBtn">결과 링크 복사</button>`:''}
+      <button class="btn btn-ghost" id="restartBtn">다시 진단하기</button>
     </div>
     <div class="foot-note">
       본 리포트는 응답자의 자가진단 응답을 기반으로 자동 산출되었습니다.<br>
@@ -366,6 +367,11 @@ function renderReport(rec){
     const url = `${siteBase()}/#id=${rec.id}`;
     navigator.clipboard.writeText(url).then(()=>toast('결과 링크가 복사되었습니다'))
       .catch(()=>toast(url));
+  });
+  const restartBtn=$('restartBtn');
+  if(restartBtn) restartBtn.addEventListener('click', ()=>{
+    // 해시(#id=...)를 제거하고 깨끗한 기본 주소로 새로고침 → 설문 처음부터 새로 시작
+    location.replace(location.pathname + location.search);
   });
 }
 
