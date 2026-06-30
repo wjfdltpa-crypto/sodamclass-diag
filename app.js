@@ -353,7 +353,7 @@ function renderReport(rec){
     <div class="result-actions" id="resultActions">
       <button class="btn btn-primary" id="pdfBtn">PDF로 저장</button>
       ${rec.id?`<button class="btn btn-ghost" id="copyBtn">결과 링크 복사</button>`:''}
-      <button class="btn btn-ghost" id="restartBtn">다시 진단하기</button>
+      <button class="btn btn-ghost" id="restartBtn">이전으로 돌아가기</button>
     </div>
     <div class="foot-note">
       본 리포트는 응답자의 자가진단 응답을 기반으로 자동 산출되었습니다.<br>
